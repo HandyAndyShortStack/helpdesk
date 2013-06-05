@@ -16,14 +16,12 @@ Add email sending and receiving capability to a new app.
 * App name is "Helpdesk"
 * Users are permitted to create at least one ticket on a web page
     * Implement Users
-    * Implement permissions for users
+    * Implement permissions for Users
+        * Users are permitted to create tickets
     * Implement Tickets
         * Tickets follow Ticketee model - title:string description:text
     * Implement web page interface for Ticket creation
-* helpdesk@example.com receives an email of the ticket's contents whenever a ticket is created
-    * helpdesk@example.com can receive email
-    * Helpdesk can send email
-    * Helpdesk sends an email to helpdesk@example.com containing notable information about a ticket upon the creation of that ticket
-    * Helpdesk receives this email on helpdesk@example.com's behalf
-* Helpdesk will reply to ticket creation emails via email
-* Contents of ticket creation reply emails will be displayed on a web page
+* An administrator receives an email containing relevant ticket details upon creation of a Ticket
+    * Helpdesk can send emails
+* An administrator can reply via email to Ticket creation emails, and Helpdesk will display the email's contents on a web page
+    * Helpdesk can receive emails
