@@ -35,6 +35,8 @@ end
 
 gem 'devise', '2.1.0'
 
+gem 'email_spec', '1.2.1'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
