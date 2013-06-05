@@ -1,7 +1,12 @@
 class TicketsController < ApplicationController
 
   def new
-    @ticket = Ticket.new
+    if !user_signed_in?
+      flash[:alert] = "You need to be signed in to create a ticket."
+      redirect_to :root
+    else
+      @ticket = Ticket.new
+    end
   end
 
   def create
