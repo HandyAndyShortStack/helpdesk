@@ -1,9 +1,5 @@
 <h1>Help Desk</h1>
 
-<% flash.keys.each do |key| %>
-  <p class="<%= key.to_s %>"><%= flash[key] %></p>
-<% end %>
-
 <% Ticket.all.each do |ticket| %>
   <p><%= link_to ticket.title, ticket %></p>
 <% end %>
