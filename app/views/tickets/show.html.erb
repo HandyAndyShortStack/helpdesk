@@ -2,5 +2,8 @@
 
 <h2><%= @ticket.title %></h2>
 <p><%= @ticket.description %></p>
+<% if @ticket.response %>
+  <p><%= @ticket.response.html_safe %></p>
+<% end %>
 
 </div>

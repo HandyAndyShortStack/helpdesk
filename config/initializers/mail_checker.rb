@@ -24,7 +24,13 @@ end
 
 class MailReader < ActionMailer::Base
   def receive(email)
-    puts "Subject ==>" + email.subject
-    puts "Body ==> " + email.body.to_s
+    # puts "Subject ==>" + email.subject
+    # puts "Body ==> " + email.body.to_s
+    if email.subject.include? "Re: New Helpdesk Ticket:"
+      ticket_title = email.subject.slice(25, 255)
+      response_body = email.body.to_s
+      ticket = Ticket.find_by_title(ticket_title)
+      ticket.update_attributes!(response: response_body) if ticket
+    end
   end
 end
