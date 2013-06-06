@@ -12,6 +12,7 @@ class TicketsController < ApplicationController
   def create
     @ticket = Ticket.create(params[:ticket])
     if @ticket.save
+      AlertMailer.alert_email(@ticket).deliver
       flash[:notice] = "ticket created successfully"
     else
       flash[:warning] = "there was a problem creating the ticket"
