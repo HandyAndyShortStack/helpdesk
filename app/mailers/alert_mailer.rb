@@ -3,6 +3,6 @@ class AlertMailer < ActionMailer::Base
   
   def alert_email(ticket)
     @ticket = ticket
-    mail(to: "andynshort@gmail.com", subject: "New Helpdesk Ticket" + ticket.title)
+    mail(to: "andynshort@gmail.com", subject: "New Helpdesk Ticket: " + ticket.title)
   end
 end
