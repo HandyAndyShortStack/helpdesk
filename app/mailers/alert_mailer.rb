@@ -1,5 +1,5 @@
 class AlertMailer < ActionMailer::Base
-  default from: "helpdesk@example.com"
+  default from: "codefellowsgold@gmail.com"
   
   def alert_email(ticket)
     @ticket = ticket
