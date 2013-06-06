@@ -60,3 +60,10 @@ module Helpdesk
     config.assets.version = '1.0'
   end
 end
+
+Thread.new do
+  while true
+    sleep 15
+    MailChecker.check_mail
+  end
+end
