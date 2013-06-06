@@ -25,3 +25,7 @@ Add email sending and receiving capability to a new app.
     * Helpdesk can send emails
 * An administrator can reply via email to Ticket creation emails, and Helpdesk will display the email's contents on a web page
     * Helpdesk can receive emails
+
+## Screenshot
+
+![screenshot](screenshot.png "here it is working")
