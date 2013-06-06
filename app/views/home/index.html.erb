@@ -1,7 +1,9 @@
 <h1>Help Desk</h1>
 
-<% Ticket.all.each do |ticket| %>
-  <p><%= link_to ticket.title, ticket %></p>
+<% if Ticket.any? %>
+  <% Ticket.all.each do |ticket| %>
+    <p><%= link_to ticket.title, ticket %></p>
+  <% end %>
 <% end %>
 
 <%= link_to "Create New Ticket", new_ticket_path %>
